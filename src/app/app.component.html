@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="hero-icon">
+    <img src="https://imgur.com/obkd1d0.jpg" height="250" width="250">
+  </div>
+  <h1 style="text-align: center;">Worldwide American</h1>
+  <div class="row">
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for keywords in Personal Files or Activities">
+    </div>
+
+    <div *ngFor="let user of users | filter:searchText">
+
+       <div *ngIf="user.personalFile.toString().toLowerCase().match(searchText.toLowerCase()) || user.activity.toString().toLowerCase().match(searchText.toLowerCase())">
+          <table mat-table class="mat-elevation-z8">
+            <ng-container matColumnDef="first-column">
+              <tr>
+                <th>{{user.name}}</th>
+                <th>{{user.title}}</th>
+                <th>
+                  <p *ngIf="!searchText">...</p>
+                  <p *ngIf="searchText && user.personalFile.toString().toLowerCase().match(searchText.toLowerCase())">Personal File</p>
+                  <p *ngIf="searchText && user.activity.toString().toLowerCase().match(searchText.toLowerCase())">Activity</p>
+                </th>
+              </tr>
+            </ng-container>
+            <ng-container matColumnDef="second-column">
+              <tr>
+                <td>Member Since<br>{{user.memberSince}}<br>Hometown<br>{{user.homeTown}}</td>
+                <td>Birthday<br>{{user.birthday}}<br>Industry<br>{{user.industry}}</td>
+                <td>
+                  <p *ngIf="!searchText">...</p>
+                  <p *ngIf="searchText && user.personalFile.toString().toLowerCase().match(searchText.toLowerCase())">{{user.personalFile}}</p>
+                  <p *ngIf="searchText && user.activity.toString().toLowerCase().match(searchText.toLowerCase())">{{user.activity}}</p>
+                </td>
+              </tr>
+            </ng-container>
+          </table>
+      </div>
+
+    </div>
+  </div>
+</div>
