@@ -8,6 +8,7 @@ import { SearchByNamePipe } from './search-by-name-pipe'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 
 
@@ -19,7 +20,7 @@ import { MaterialModule } from './material.module';
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  declarations: [ AppComponent, SearchByNamePipe ],
+  declarations: [ AppComponent, SearchByNamePipe, TopBarComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
