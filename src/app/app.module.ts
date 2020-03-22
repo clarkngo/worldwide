@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FooterComponent } from './footer/footer.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+
 
 
 
@@ -20,7 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  declarations: [ AppComponent, SearchByNamePipe, FooterComponent ],
+  declarations: [ AppComponent, SearchByNamePipe, FooterComponent, TopBarComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
