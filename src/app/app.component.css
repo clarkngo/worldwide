@@ -19,7 +19,7 @@ th, td {
 }
 
 .container {
-  margin-top: 150px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
@@ -34,6 +34,17 @@ th, td {
   margin-right: auto;
   width: 50%;
 }
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-top: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
 
 .search-hero {
   padding-top: 60px;
