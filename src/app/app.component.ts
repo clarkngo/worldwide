@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { users } from './users';
+import { AuthService } from './auth/auth.service';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
+export class AppComponent {
   title = 'Worldwide American';
-  searchText;
-  users = users;
+
+  constructor(public authService: AuthService) {}
 }

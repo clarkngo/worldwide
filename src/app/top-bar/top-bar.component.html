@@ -1,10 +1,18 @@
-<nav role='navigation'>
-  <ul>
-    <li><a href="#">Profile</a>
-      <ul>
-        <li><a href="">Mario Speedwagon</a></li>
-        <li><a href="">Gail Forcewind</a></li>
-      </ul>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <a class="navbar-brand" routerLink="/">{{ title }}</a>
+  </div>
+  <!-- <ul class="nav navbar-nav">
+    <li>
+      <a routerLink="profile" *ngIf="authService.isLoggedIn" routerLinkActive="active">Profile</a>
+    </li>
+  </ul> -->
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <a *ngIf="!authService.isLoggedIn" (click)="authService.login()">Log In</a>
+    </li>
+    <li>
+      <a (click)="authService.logout()" *ngIf="authService.isLoggedIn">Log Out</a>
     </li>
   </ul>
 </nav>
