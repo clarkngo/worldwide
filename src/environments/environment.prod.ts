@@ -5,6 +5,7 @@ export const environment = {
     domain: 'worldwideamerican.auth0.com', // e.g., you.auth0.com
     audience: '', // e.g., http://localhost:3001
     redirect: 'http://www.worldwideamerican.net/callback',
-    scope: 'openid profile email'
+    scope: 'openid profile email',
+    returnTo: 'http://www.worldwideamerican.net/'
   }
 };

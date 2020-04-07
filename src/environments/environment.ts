@@ -10,6 +10,7 @@ export const environment = {
     domain: 'worldwideamerican.auth0.com', // e.g., you.auth0.com
     audience: '', // e.g., http://localhost:3001
     redirect: 'http://localhost:4200/callback',
-    scope: 'openid profile email'
+    scope: 'openid profile email',
+    returnTo: 'http://localhost:4200/'
   }
 };
