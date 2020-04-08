@@ -10,10 +10,8 @@
 } */
 
 /*| Navigation |*/
-.navbar-right { margin-right: 0px !important}
 
 nav{
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,7 +22,7 @@ nav{
 nav ul{
   list-style: none;
   position: relative;
-  float: right;
+  float: left;
   margin-right: 100px;
   display: inline-table;
 }
