@@ -1,12 +1,17 @@
 <nav class="navbar navbar-default">
-  <div class="navbar-header">
+  <!-- <div class="navbar-header">
     <a class="navbar-brand" routerLink="/">{{ title }}</a>
-  </div>
+  </div> -->
   <!-- <ul class="nav navbar-nav">
     <li>
       <a routerLink="profile" *ngIf="authService.isLoggedIn" routerLinkActive="active">Profile</a>
     </li>
   </ul> -->
+  <ul class="nav navbar-nav navbar-left">
+    <li>
+      <a class="navbar-brand" routerLink="/">{{ title }}</a>
+    </li>
+  </ul>
   <ul class="nav navbar-nav navbar-right">
     <li>
       <a *ngIf="!authService.isLoggedIn" (click)="authService.login()">Log In</a>
