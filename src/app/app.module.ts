@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchByNamePipe } from './search-by-name-pipe';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
     FooterComponent,
     SearchByNamePipe,
     SearchFormComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,

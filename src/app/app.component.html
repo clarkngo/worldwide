@@ -8,8 +8,8 @@
         </div>
         <h1 style="text-align: center;">{{ title }}</h1>
       </div>
-      <app-search-form *ngIf="authService.isLoggedIn"></app-search-form>
       <router-outlet></router-outlet>
+      <app-search-form *ngIf="authService.isLoggedIn"></app-search-form>
     </div>
   </div>
 

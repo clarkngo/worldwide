@@ -6,8 +6,13 @@ import { PrivateDealsComponent } from './private-deals/private-deals.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 const routes: Routes = [
+  {
+    path: 'about',
+    component: AboutPageComponent
+  },
   {
     path: 'deals',
     component: PublicDealsComponent
