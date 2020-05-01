@@ -19,6 +19,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchByNamePipe } from './search-by-name-pipe';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     SearchByNamePipe,
     SearchFormComponent,
     AboutPageComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
