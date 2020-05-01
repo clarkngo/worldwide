@@ -2,13 +2,7 @@
   <app-top-bar [title]="title" [authService]="authService"></app-top-bar>
   <div id="content-wrap">
     <div class="container">
-      <div *ngIf="!authService.isLoggedIn">
-        <div class="hero-icon">
-          <img src="https://worldwideamerican-logo.s3-us-west-2.amazonaws.com/logo.png" height="250" width="250">
-        </div>
-        <h1 style="text-align: center;">{{ title }}</h1>
-      </div>
-      <app-search-form *ngIf="authService.isLoggedIn"></app-search-form>
+
       <router-outlet></router-outlet>
     </div>
   </div>
