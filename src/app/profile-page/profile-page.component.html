@@ -2,13 +2,13 @@
   <div class="search-hero">
     <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for keywords in Personal Files or Activities">
   </div>
-  <div *ngFor="let user of users | filter:searchText ; index as userId">
+  <div *ngFor="let user of users | filter:searchText">
 
     <div *ngIf="user.personalFile.toString().toLowerCase().match(searchText.toLowerCase()) || user.activity.toString().toLowerCase().match(searchText.toLowerCase())">
         <table class="mat-elevation-z8">
           <ng-container matColumnDef="first-column">
             <tr>
-              <th><img src="{{user.picture}}" height="50" width="50"> {{user.name}}</th>
+              <th>{{user.name}}</th>
               <th>{{user.title}}</th>
               <th>
                 <p *ngIf="!searchText">...</p>
@@ -19,12 +19,7 @@
           </ng-container>
           <ng-container matColumnDef="second-column">
             <tr>
-              <td>
-                <button class="btn btn-info">
-                  <a [routerLink]="['/profiles', userId]">Access Full Profile</a>
-                </button><br/>Member Since<br>{{user.memberSince}}<br>Hometown<br>{{user.homeTown}}</td>
-              <td>
-              </td>
+              <td>Member Since<br>{{user.memberSince}}<br>Hometown<br>{{user.homeTown}}</td>
               <td>Birthday<br>{{user.birthday}}<br>Industry<br>{{user.industry}}</td>
               <td>
                 <p *ngIf="!searchText">...</p>
@@ -38,3 +33,4 @@
 
   </div>
 </div>
+

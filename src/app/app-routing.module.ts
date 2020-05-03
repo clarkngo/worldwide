@@ -9,6 +9,10 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { DatabasePageComponent } from './database-page/database-page.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   {
@@ -16,18 +20,34 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-  path: 'about',
-  component: AboutPageComponent
+    path: 'about',
+    component: AboutPageComponent
+  },
+  {
+    path: 'database',
+    component: DatabasePageComponent
+  },
+  {
+    path: 'profiles',
+    component: UserListComponent
+  },
+  {
+    path: 'profiles/:userId',
+    component: UserDetailsComponent
+  },
+  {
+    path: 'profile/:userId',
+    component: ProfilePageComponent
   },
   {
     path: 'deals',
     component: PublicDealsComponent
   },
-  {
-    path: 'profile',
-    component: ProfileComponent,
-    canActivate: [ AuthGuard ]
-  },
+  // {
+  //   path: 'profile',
+  //   component: ProfileComponent,
+  //   canActivate: [ AuthGuard ]
+  // },
   {
     path: 'callback',
     component: CallbackComponent

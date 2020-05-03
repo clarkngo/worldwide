@@ -20,6 +20,10 @@ import { SearchByNamePipe } from './search-by-name-pipe';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { DatabasePageComponent } from './database-page/database-page.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 
 @NgModule({
@@ -35,6 +39,10 @@ import { HomePageComponent } from './home-page/home-page.component';
     SearchFormComponent,
     AboutPageComponent,
     HomePageComponent,
+    ProfilePageComponent,
+    UserDetailsComponent,
+    DatabasePageComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
