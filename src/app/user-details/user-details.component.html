@@ -1,6 +1,6 @@
 <h1>Profile Details</h1>
 <div *ngIf="user">
-  <mat-card class="example-card center" style="float: left;">
+  <mat-card class="example-card" style="float: left;">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ user.name }}</mat-card-title>
@@ -12,7 +12,7 @@
       <p>{{ user.bio }}</p>
     </mat-card-content>
   </mat-card>
-  <mat-card class="example-card center" style="float: right;">
+  <mat-card class="example-card" style="float: right;">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
 
@@ -37,7 +37,7 @@
         </button>
       </div>
     </mat-card-header>
-    <div style="padding: 20px">
+    <div style="padding: 20px 0px 10px 0px">
       <ng-container *ngIf="log">
         <div style="margin: 0 auto;text-align: left;">
           {{ user.log }}
@@ -45,7 +45,9 @@
       </ng-container>
       <ng-container *ngIf="resume">
         <div style="margin: 0 auto;text-align: left;">
-          <img src="{{user.resume}}" width="400px" height="500px">
+          <div *ngFor="let resume of user.resumes">
+            <img src="{{resume}}" width="518px" height="700px">
+          </div>
         </div>
       </ng-container>
       <ng-container *ngIf="project">
@@ -67,7 +69,7 @@
       </ng-container>
           <ng-container *ngIf="highlights">
         <div style="margin: 0 auto;text-align: left;">
-          <img src="{{user.highlights}}">
+          <img src="{{user.highlights}}" width="500px" height="700px">
         </div>
       </ng-container>
       <ng-container *ngIf="community">
