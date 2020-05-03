@@ -10,6 +10,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 @NgModule({
   imports: [
@@ -24,6 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatTableModule,
     MatDividerModule,
     MatFormFieldModule,
+    MatProgressBarModule,
   ],
   exports: [
     MatButtonModule,
@@ -37,6 +40,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatTableModule,
     MatDividerModule,
     MatFormFieldModule,
+    MatProgressBarModule,
   ]
 })
 export class MaterialModule {}

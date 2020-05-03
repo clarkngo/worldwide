@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { users } from '../user';
+import { ActivatedRoute } from '@angular/router';
+import { users } from '../users';
 
 @Component({
   selector: 'app-search-form',
@@ -10,9 +11,15 @@ export class SearchFormComponent implements OnInit {
   searchText;
   users = users;
 
-  constructor() { }
+  user;
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.user = users[+params.get('userId')];
+    });
   }
 
 }

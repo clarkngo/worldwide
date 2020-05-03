@@ -1,0 +1,23 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-card {
+  max-width: 550px;
+}
+
+.example-header-image {
+  background-image: url('https://worldwideamerican-logo.s3-us-west-2.amazonaws.com/logo.png');
+  background-size: cover;
+}
+
+.example-button-row {
+  display: table-cell;
+}
+
+button {
+  padding: 0px 1.5px 0px 1.5px;
+  margin: 2.5px;
+}

@@ -1,0 +1,7 @@
+<div *ngFor="let user of users; index as userId">
+  <h3>
+    <a [title]="user.name + ' details'" [routerLink]="['/profiles', userId]">
+      {{ user.name }}
+    </a>
+  </h3>
+</div>
